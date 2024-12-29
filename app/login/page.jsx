@@ -39,7 +39,7 @@ const Login = () => {
 
     try {
       await signInWithEmailAndPassword(auth, formData.email, formData.password);
-      router.push('/landing'); // Navigate to the landing page upon successful login
+      router.push('/'); // Navigate to the landing page upon successful login
     } catch (err) {
       const customMessage = errorMessages[err.code] || 'An unexpected error occurred. Please try again.';
       setError(customMessage);
